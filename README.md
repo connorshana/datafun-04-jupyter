@@ -1,45 +1,46 @@
 # datafun-04-jupyter
+
 Project 4 
+
 Exploratory Data Analysis with IRIS data set.
 The IRIS data set analyzes information about three different species of the iris flower and characteristics of the petals and sepals.
 
  ## How to Install and Run the Project
- py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install jupyterlab pandas matplotlib seaborn
-py -m pip freeze > requirements.txt
+  Enter these commands:
+   py -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   py -m pip install jupyterlab pandas matplotlib seaborn
+   py -m pip freeze > requirements.txt
 
 ## How to Run the Project in jupyter lab 
- open root project folder
- cd datafun-04-jupyter
- create the Notebook, create new fill with .ipynb extension
- Add a markdown cell at the top of the notebook with the introduction
+  1. Open root project folder
+  2. Run: cd datafun-04-jupyter
+  3. Create the Notebook
+  4. Create new file with .ipynb extension
+  5. Add a markdown cell at the top of the notebook with the introduction
 
 ### 1. Environment Setup
+      1.**Create** and **activate** the project virtual environment.
+      2. Install all required packages into your local project virtual environment.
+      3. After installing the required dependencies, update or generate a  **requirements.txt** file.
+      4. Add a **.gitignore** file to your project with useful entries. See [.gitignore](.gitignore) example.
+      5. Document the steps and commands in your README.md.
 
-1. **Create** and **activate** the project virtual environment.
-1. Install all required packages into your local project virtual environment.
-1. After installing the required dependencies, update or generate a  **requirements.txt** file.
-1. Add a **.gitignore** file to your project with useful entries. See [.gitignore](.gitignore) example.
-1. Document the steps and commands in your README.md.
-
-Terminal Commands: Windows example - record your process in your README:
-
-```Powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install jupyterlab pandas matplotlib seaborn
-py -m pip freeze > requirements.txt
-```
-
-Terminal Commands: Mac example - record your process in your README:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install jupyterlab pandas matplotlib seaborn
-python3 -m pip freeze > requirements.txt
-```
+   ## Record your process in your README:  
+       Terminal Commands:
+          ```Powershell
+         py -m venv .venv
+         .\.venv\Scripts\Activate.ps1
+         py -m pip install jupyterlab pandas matplotlib seaborn
+         py -m pip freeze > requirements.txt
+         ```
+        Terminal Commands, MAC example:
+         ```bash
+         python3 -m venv .venv
+         source .venv/bin/activate
+         python3 -m pip install jupyterlab pandas matplotlib seaborn
+         python3 -m pip freeze > requirements.txt
+         ```
 
 ### 2. Project Start
 
@@ -52,7 +53,7 @@ For example, to set up Jupyter using **VS Code**:
 2. Open the Project Folder: Open your root project repository folder in VS Code. (Usually in your Documents folder.)
 3. Select the Python Interpreter: From the command palette (Ctrl+Shift+P), select "Python: Select Interpreter" and choose the interpreter from your virtual environment.
 
-Then create, open, and start a new notebook in your root project repository folder:
+   ### Then create, open, and start a new notebook in your root project repository folder:
 
 1. Create the Notebook: In the VS Code Explorer, create a new file i.e., yourname_eda.ipynb. Ensure it has a .ipynb extension.
 2. Verify your new notebook is open for editing. If needed, view the project files in VS Code Explorer and double-click the notebook file to open it for editing.
@@ -60,10 +61,10 @@ Then create, open, and start a new notebook in your root project repository fold
 
 ### 3. Import Dependencies (At the Top, After the Introduction)
 
-Add a Python cell next with the import statements for the libraries you will use in the project.
-Follow conventional package import organization and alias. 
-Import each package just once near the top of the file. 
-Be sure you have INSTALLED any external packages (outside the Python Standard Library) into your active project virtual environment first.
+1.  Add a Python cell next with the import statements for the libraries you will use in the project.
+2.  Follow conventional package import organization and alias. 
+3.  Import each package just once near the top of the file. 
+4.  Be sure you have INSTALLED any external packages (outside the Python Standard Library) into your active project virtual environment first.
 
 Jupyter Notebook / Python cell example:
 
@@ -72,23 +73,25 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 ```
-Execute the cell to ensure everything works. 
-If you get errors on one of the statements above, the most common issue is that package has not been installed into the active project virtual environment.
-When you find you need a new package, first install it into the active project virtual environment and then import it near the top of your Python or Notebook file. 
+5.  Execute the cell to ensure everything works. 
+6.  If you get errors on one of the statements above, the most common issue is that package has not been installed into         the active project virtual environment.
+7.  When you find you need a new package, first install it into the active project virtual environment and then import it       near the top of your Python or Notebook file. 
 
 ### 4.  Exploratory Data Analysis
 
-Perform exploratory data analysis (EDA) using pandas and other tools as needed.
-We will use the Seaborn library to load the Iris dataset.
-Review the dataset here: [iris.csv](https://raw.githubusercontent.com/plotly/datasets/master/iris.csv) or see the local copy provided [iris.csv](iris.csv).
+1.  Perform exploratory data analysis (EDA) using pandas and other tools as needed.
+2.  We will use the Seaborn library to load the Iris dataset.
+3.  Review the dataset here: [iris.csv](https://raw.githubusercontent.com/plotly/datasets/master/iris.csv) or see the           local copy provided [iris.csv](iris.csv).
 
-#### Step 1. Data Acquisition
+#### Execute EDA
 
-Use the Iris dataset available in the Seaborn library.
-The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification tasks and basic data exploration.
-Load the data into a pandas DataFrame.
-Use the pd read functions such as pd.read_csv() or pd.read_excel() as appropriate.
-To read from the Seaborn dataset, we'll use sns.load_dataset() function and pass in the 'iris' (the name without .csv) to populate our DataFrame.
+### Step 1. Data Acquisition
+
+1.  Use the Iris dataset available in the Seaborn library.
+    The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification       tasks and basic data exploration.
+2.  Load the data into a pandas DataFrame.
+3.  Use the pd read functions such as pd.read_csv() or pd.read_excel() as appropriate.
+    ### To read from the Seaborn dataset, we'll use sns.load_dataset() function and pass in the 'iris' (the name without       .csv) to populate our DataFrame.
 
 Jupyter Notebook / Python cell example:
 
@@ -102,7 +105,7 @@ print(df.head())
 
 #### Step 2. Initial Data Inspection
 
-Display the first 10 rows of the DataFrame, check the shape, and display the data types of each column using df.head(10), df.shape, and df.dtypes.
+1.  Display the first 10 rows of the DataFrame, check the shape, and display the data types of each column using               df.head(10), df.shape, and df.dtypes.
 
 Jupyter Notebook / Python cell example:
 
@@ -115,7 +118,7 @@ print(df.dtypes)
 
 #### Step 3. Initial Descriptive Statistics
 
-Use the DataFrame describe() method to display summary statistics for each column.
+1.  Use the DataFrame describe() method to display summary statistics for each column.
 
 Jupyter Notebook / Python cell example:
 
@@ -125,8 +128,9 @@ print(df.describe())
 
 #### Step 4. Initial Data Distribution for Numerical Columns
 
-Choose a numerical column and use df['column_name'].hist() to plot a histogram for that specific column.
-To show all the histograms for all numerical columns, use df.hist().
+1.  Choose a numerical column and use df['column_name'].hist() to plot a histogram for that specific column.
+
+### To show all the histograms for all numerical columns, use df.hist().
 
 Jupyter Notebook / Python cell example:
 
@@ -141,12 +145,12 @@ df.hist()
 plt.show()
 ```
 
-Afterwards, use a Markdown cell to document your observations.
+2.  Afterwards, use a Markdown cell to document your observations.
 
 #### Step 5. Initial Data Distribution for Categorical Columns
 
-Choose a categorical column and use df['column_name'].value_counts() to display the count of each category.
-Use a loop to show the value counts for **all** categorical columns.
+1.  Choose a categorical column and use df['column_name'].value_counts() to display the count of each category.
+    Use a loop to show the value counts for **all** categorical columns.
 
 Jupyter Notebook / Python cell example:
 
@@ -169,9 +173,9 @@ Afterwards, use a Markdown cell to document your observations.
 
 #### Step 6. Initial Data Transformation and Feature Engineering
 
-Use pandas and other tools to perform transformations as needed.
-Transformation may include renaming columns, adding new columns,
-or transforming existing data for more in-depth analysis.
+1.  Use pandas and other tools to perform transformations as needed.
+    Transformation may include renaming columns, adding new columns,
+    or transforming existing data for more in-depth analysis.
 
 Jupyter Notebook / Python cell example:
 
@@ -185,8 +189,8 @@ df['Sepal Area'] = df['Sepal Length'] * df['sepal_width']
 
 #### Step 7. Initial Visualizations
 
-Create a variety of chart types using seaborn and matplotlib to showcase different aspects of the data.
-There is a guided example in the resources section at the end of this document.
+1.  Create a variety of chart types using seaborn and matplotlib to showcase different aspects of the data.
+    There is a guided example in the resources section at the end of this document.
 
 Jupyter Notebook / Python cell example:
 
@@ -195,14 +199,14 @@ sns.pairplot(df, hue='species')
 plt.show()
 ```
 
-After each visualization, use Markdown cells to document your observations and insights.
+2.  After each visualization, use Markdown cells to document your observations and insights.
 
 #### Step 8. Initial Storytelling and Presentation
 
-Present your notebook with an opening that introduces yourself and your topic.
-Use Markdown section headings to introduce each step.
-Interpret the visualizations and statistics to narrate a clear and compelling data story.
-Present your findings in a logical and engaging manner.
+1.  Present your notebook with an opening that introduces yourself and your topic.
+2.  Use Markdown section headings to introduce each step.
+3.  Interpret the visualizations and statistics to narrate a clear and compelling data story.
+4.  Present your findings in a logical and engaging manner.
 
 ## Notebook Design
 
