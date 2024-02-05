@@ -1,5 +1,8 @@
 # datafun-04-jupyter
-Project 4
+Project 4 
+Exploratory Data Analysis with IRIS data set.
+The IRIS data set analyzes information about three different species of the iris flower and characteristics of the petals and sepals.
+
  ## How to Install and Run the Project
  py -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -7,10 +10,10 @@ py -m pip install jupyterlab pandas matplotlib seaborn
 py -m pip freeze > requirements.txt
 
 ## How to Run the Project in jupyter lab 
-## open root project folder
-## cd datafun-04-jupyter
-## create the Notebook, create new fill with .ipynb extension
-## Add a markdown cell at the top of the notebook with the introduction
+ open root project folder
+ cd datafun-04-jupyter
+ create the Notebook, create new fill with .ipynb extension
+ Add a markdown cell at the top of the notebook with the introduction
 
 ### 1. Environment Setup
 
